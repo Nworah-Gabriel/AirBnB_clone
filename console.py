@@ -1,4 +1,4 @@
-##!/usr/bin/python
+#!/usr/bin/python
 
 """A module for command line interface tool"""
 import cmd
