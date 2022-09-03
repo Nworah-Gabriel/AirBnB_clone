@@ -74,5 +74,11 @@ EOF  help  quit
 (hbnb) 
 $
 ```
+```
+$./console.py
+(hbnb) EOF
+
+$
+```
 
 - All tests should also pass in non-interactive mode: $ echo "python3 -m unittest discover tests" | bash
