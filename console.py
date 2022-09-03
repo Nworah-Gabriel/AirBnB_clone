@@ -58,6 +58,7 @@ class HBNBCommand(cmd.Cmd):
         return arg
 
     def do_count(self, arg):
+        """ Counts any class attribute"""
         if arg in self.__classes:
             with open("storage.json", 'r') as file:
                 new = json.load(file)
