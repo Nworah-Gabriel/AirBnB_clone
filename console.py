@@ -141,7 +141,7 @@ class HBNBCommand(cmd.Cmd):
             print("** class name missing **")
 
         elif value[0] == 'all':
-            with open("file.json", "r") as file:
+            with open(type(self).__file_path, "r") as file:
                 holder = json.load(file)
             file.close()
             holder.clear()
