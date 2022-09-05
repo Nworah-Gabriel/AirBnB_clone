@@ -157,11 +157,9 @@ class HBNBCommand(cmd.Cmd):
             print("** class doesn't exist **")
 
         elif value[0] in self.__classes:
-            with open(type(self).__file_path, "r") as file:
+            with open("file.json", "r") as file:
                 holder = json.load(file)
             file.close()
-            except FileNotFoundError:
-                pass
             try:
                 key = value[0] + "." + value[1]
             except IndexError:
