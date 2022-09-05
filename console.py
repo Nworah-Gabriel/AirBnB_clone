@@ -157,9 +157,12 @@ class HBNBCommand(cmd.Cmd):
             print("** class doesn't exist **")
 
         elif value[0] in self.__classes:
-            with open(type(self).__file_path, "r") as file:
-                holder = json.load(file)
-            file.close()
+            try:
+                with open(type(self).__file_path, "r") as file:
+                    holder = json.load(file)
+                file.close()
+            except FileNotFoundError:
+                pass
             try:
                 key = value[0] + "." + value[1]
             except IndexError:
@@ -173,9 +176,12 @@ class HBNBCommand(cmd.Cmd):
             except KeyError:
                 print("** no instance found **")
                 return
-            with open("file.json", "w") as file:
-                json.dump(holder, file, indent=2)
-            file.close()
+            try:
+                with open("file.json", "w") as file:
+                    json.dump(holder, file, indent=2)
+                file.close()
+            except FileNotFoundError:
+                pass
 #           FOR STORAGE REPRESENTATION
             with open("storage.json", "r") as file:
                 holder = json.load(file)
