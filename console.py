@@ -91,7 +91,7 @@ class HBNBCommand(cmd.Cmd):
         """
         value = parse(arg)
         if not value:
-            print("**class name missing **")
+            print("** class name missing **")
         # if value[0] == 'BaseModel':
         elif value[0] in self.__classes:
             print(eval(value[0])().id)
@@ -108,7 +108,7 @@ class HBNBCommand(cmd.Cmd):
         value = parse(arg)
 
         if not value:
-            print("** class name is missing **")
+            print("** class name missing **")
 
         elif value[0] not in self.__classes:
             print("** class doesn't exist **")
@@ -120,7 +120,7 @@ class HBNBCommand(cmd.Cmd):
             try:
                 key = value[0] + "." + value[1]
             except IndexError:
-                print("** instance id is missing **")
+                print("** instance id missing **")
                 return
             try:
                 print(holder[key])
@@ -138,7 +138,7 @@ class HBNBCommand(cmd.Cmd):
         all_obj = storage.all()
 
         if not value:
-            print("** class name is missing **")
+            print("** class name missing **")
 
         elif value[0] == 'all':
             with open("file.json", "r") as file:
@@ -163,7 +163,7 @@ class HBNBCommand(cmd.Cmd):
             try:
                 key = value[0] + "." + value[1]
             except IndexError:
-                print("** instance id is missing **")
+                print("** instance id missing **")
                 return
             try:
                 holder.pop(key)
@@ -235,11 +235,11 @@ class HBNBCommand(cmd.Cmd):
         value = parse(arg)
 
         if not value:
-            print("** class is missing **")
+            print("** class name missing **")
             return
 
         elif value[0] not in self.__classes:
-            print("** class doesn't exist**")
+            print("** class doesn't exist **")
             return
 
         elif len(value) < 2:
