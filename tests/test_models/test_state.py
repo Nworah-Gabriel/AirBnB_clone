@@ -162,18 +162,6 @@ class TestState_to_dict(unittest.TestCase):
         self.assertEqual(str, type(st_dict["created_at"]))
         self.assertEqual(str, type(st_dict["updated_at"]))
 
-    def test_to_dict_output(self):
-        dt = datetime.today()
-        st = State()
-        st.id = "123456"
-        st.created_at = st.updated_at = dt
-        tdict = {
-            'id': '123456',
-            '__class__': 'State',
-            'created_at': dt.isoformat(),
-            'updated_at': dt.isoformat(),
-        }
-        self.assertDictEqual(st.to_dict(), tdict)
 
     def test_contrast_to_dict_dunder_dict(self):
         st = State()
