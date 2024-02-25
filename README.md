@@ -86,6 +86,3 @@ $
 
 
 ![console](https://user-images.githubusercontent.com/59466195/183268981-14576f75-aa4a-4a4b-b25f-c02f551ec91f.png)
-
-## License
-This project is licensed under the MIT License.
