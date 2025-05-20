@@ -2,7 +2,7 @@
 
 ![hbnb](https://user-images.githubusercontent.com/59466195/183268975-648aa48a-76f1-486d-8e55-b335e4279a9e.png)
 
-## Description
+## Project Description
 The AirbnB clone is a **web application project** that consists of four(4) different parts:
 
 - A command interpreter to manipulate data without a visual interface, like in a Shell (perfect for development and debugging)
